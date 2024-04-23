@@ -1,0 +1,74 @@
+* {
+  user-select: none;
+  cursor: default;
+}
+
+body, html {
+  height: 100%;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+}
+
+h1, p {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-decoration:none;
+}
+
+h1 {
+  padding: 50px 0;
+  margin: 0 50px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 200;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  text-decoration:none;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 200;
+  margin: 0 50px;
+  color: #53646e;
+}
+p em {
+  color: #19d400;
+}
+
+#container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#container button {
+  padding: 20px;
+  border: none;
+  background: transparent;
+  display: block;
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+}
+
+.dot {
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 0;
+  animation: sploosh 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: transparent;
+}
+
+@keyframes sploosh {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 255, 34, 0.7);
+    background: rgba(0, 255, 21, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 300px rgba(66, 166, 223, 0);
+    background: rgba(66, 166, 223, 0);
+  }
+}
